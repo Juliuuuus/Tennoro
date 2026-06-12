@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contactez Tennoro pour une question, une demande de support ou une information sur le VIP."
+    />
+    <title>Contact - Tennoro</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navigation principale">
+        <a class="brand" href="./index.html#top" aria-label="Tennoro accueil">
+          <img src="./assets/tennoro-logo.png" alt="" />
+          <span>Tennoro</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="./index.html#performances">Stats</a>
+          <a href="./index.html#technologie">Technologie</a>
+          <a href="./index.html#vip">Pricing</a>
+          <a href="./index.html#faq">FAQ</a>
+        </div>
+
+        <a class="nav-cta" href="https://discord.gg/HUsTT7X5Pn">Discord</a>
+      </nav>
+    </header>
+
+    <main class="contact-page">
+      <section class="contact-hero section-pad">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container contact-layout">
+          <div class="contact-copy reveal-on-scroll">
+            <p class="hero-label">Contact Tennoro</p>
+            <h1>
+              Une question ?
+              <span>Écrivez-nous.</span>
+            </h1>
+            <p>
+              Pour une demande liée au serveur Discord, au VIP, aux statistiques ou au fonctionnement
+              de Tennoro, envoyez-nous un message directement depuis ce formulaire.
+            </p>
+          </div>
+
+          <form class="contact-card reveal-on-scroll" id="contact-form">
+            <div class="form-row">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Sujet</label>
+              <input id="subject" name="subject" type="text" required />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+
+            <button class="button button-primary full-width" type="submit">Envoyer le message</button>
+            <p class="form-note">Le formulaire ouvrira votre application email avec le message prérempli.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./index.html#top" aria-label="Tennoro accueil">
+            <img src="./assets/tennoro-logo.png" alt="" />
+            <span>Tennoro</span>
+          </a>
+          <p>Analyses tennis ATP &amp; WTA basées sur les données.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://discord.gg/HUsTT7X5Pn">Discord</a>
+          <a href="https://app.notion.com/p/Conditions-G-n-rales-d-Utilisation-CGU-Tennoro-3789ee83b618803888a6c2bb2534d85a">CGU</a>
+          <a href="https://app.notion.com/p/Politique-de-Confidentialit-Tennoro-3789ee83b6188089b44ad5f4073d7315">Politique de confidentialité</a>
+          <a href="https://app.notion.com/p/Conditions-G-n-rales-de-Vente-CGV-Tennoro-3789ee83b61880c59d78fdbc78d5579b">CGV</a>
+          <a href="https://discord.gg/HUsTT7X5Pn">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const contactForm = document.querySelector("#contact-form");
+
+      contactForm?.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const name = String(formData.get("name") || "").trim();
+        const email = String(formData.get("email") || "").trim();
+        const subject = String(formData.get("subject") || "Contact Tennoro").trim();
+        const message = String(formData.get("message") || "").trim();
+        const body = [
+          `Nom : ${name}`,
+          `Email : ${email}`,
+          "",
+          "Message :",
+          message,
+        ].join("\n");
+
+        window.location.href = `mailto:batonjules@hotmail.com?subject=${encodeURIComponent(
+          `[Tennoro] ${subject}`
+        )}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+  </body>
+</html>
