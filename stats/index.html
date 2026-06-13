@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Statistiques publiques Tennoro : précision, ROI, bankroll, profit et performances détaillées."
+    />
+    <title>Statistiques - Tennoro</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon_tennoro.png" />
+    <script src="../stats-config.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navigation principale">
+        <a class="brand" href="../index.html#top" aria-label="Tennoro accueil">
+          <img src="../assets/tennoro-logo.png" alt="" />
+          <span>Tennoro</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="./index.html">Stats</a>
+          <a href="../index.html#technologie">Technologie</a>
+          <a href="../index.html#vip">Pricing</a>
+          <a href="../index.html#faq">FAQ</a>
+        </div>
+
+        <a class="nav-cta" href="https://discord.gg/HUsTT7X5Pn">Discord</a>
+      </nav>
+    </header>
+
+    <main class="stats-page">
+      <section class="stats-hero section-pad">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container stats-hero-inner">
+          <p class="hero-label">Dashboard public</p>
+          <h1>STATISTIQUES TENNORO</h1>
+          <p>
+            Toutes les performances du modèle suivies automatiquement à partir des sélections publiées.
+          </p>
+          <small data-stats-updated>Dernière mise à jour : chargement...</small>
+
+          <div class="performance-grid stats-overview-grid">
+            <article class="performance-card" data-kpi="accuracy">
+              <span>Précision globale</span>
+              <strong data-stats-kpi="accuracy">--</strong>
+              <p data-stats-kpi-detail="accuracy">Sélections clôturées</p>
+            </article>
+            <article class="performance-card highlight" data-kpi="profit">
+              <span>Profit</span>
+              <strong data-stats-kpi="profit">--</strong>
+              <p data-stats-kpi-detail="roi">ROI : --</p>
+            </article>
+            <article class="performance-card" data-kpi="stake">
+              <span>Mise totale</span>
+              <strong data-stats-kpi="total-stake">--</strong>
+              <p data-stats-kpi-detail="average-odds">Cote moyenne : --</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-section-heading">
+            <h2>Statistiques détaillées</h2>
+            <p>Catégories, surfaces et circuits seront regroupés ici dès que le bot exposera ces données.</p>
+          </div>
+
+          <div class="stats-detail-block">
+            <div class="stats-detail-row">
+              <div class="stats-detail-title">
+                <h3>Précision par niveau</h3>
+              </div>
+              <div class="stats-segment-grid stats-row-three" data-segment-group="category"></div>
+            </div>
+
+            <div class="stats-detail-row">
+              <div class="stats-detail-title">
+                <h3>Précision par circuit</h3>
+              </div>
+              <div class="stats-segment-grid stats-row-two" data-segment-group="circuit"></div>
+            </div>
+
+            <div class="stats-detail-row">
+              <div class="stats-detail-title">
+                <h3>Précision par surface</h3>
+              </div>
+              <div class="stats-segment-grid stats-row-three" data-segment-group="surface"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="container">
+          <div class="profit-dashboard stats-chart-panel">
+            <h3>Évolution du profit</h3>
+
+            <svg class="profit-chart stats-bankroll-chart" viewBox="0 0 980 320" role="img" aria-labelledby="stats-chart-title">
+              <title id="stats-chart-title">Évolution du profit Tennoro</title>
+              <g class="profit-grid" data-stats-chart-grid aria-hidden="true"></g>
+              <path class="profit-area" data-stats-chart-area d="" />
+              <path class="profit-line" data-stats-chart-line d="" />
+              <g class="profit-points" data-stats-chart-points></g>
+              <g class="profit-axis-labels" data-stats-chart-labels aria-hidden="true"></g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-table-card">
+            <div class="stats-detail-title">
+              <h3>Historique mensuel</h3>
+            </div>
+            <div class="stats-table-wrap">
+              <table class="stats-table">
+                <thead>
+                  <tr>
+                    <th>Mois</th>
+                    <th>Picks</th>
+                    <th>Précision</th>
+                    <th>ROI</th>
+                    <th>Profit</th>
+                  </tr>
+                </thead>
+                <tbody data-monthly-history>
+                  <tr>
+                    <td colspan="5">Chargement...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section stats-transparency">
+        <div class="container">
+          <div class="transparency-card">
+            <p>
+              Les statistiques affichées sont calculées automatiquement à partir des sélections publiées sur Tennoro.
+              Aucune donnée n'est modifiée manuellement. Les performances passées ne garantissent pas les performances futures.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../index.html#top" aria-label="Tennoro accueil">
+            <img src="../assets/tennoro-logo.png" alt="" />
+            <span>Tennoro</span>
+          </a>
+          <p>Analyses tennis ATP &amp; WTA basées sur les données.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://discord.gg/HUsTT7X5Pn">Discord</a>
+          <a href="https://app.notion.com/p/Conditions-G-n-rales-d-Utilisation-CGU-Tennoro-3789ee83b618803888a6c2bb2534d85a">CGU</a>
+          <a href="https://app.notion.com/p/Politique-de-Confidentialit-Tennoro-3789ee83b6188089b44ad5f4073d7315">Politique de confidentialité</a>
+          <a href="https://app.notion.com/p/Conditions-G-n-rales-de-Vente-CGV-Tennoro-3789ee83b61880c59d78fdbc78d5579b">CGV</a>
+          <a href="https://discord.gg/HUsTT7X5Pn">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const STATS_API_URL = window.TENNORO_CONFIG?.statsApiUrl || "";
+      const numberFormatter = new Intl.NumberFormat("fr-FR");
+      const euroFormatter = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+      const percentFormatter = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 2 });
+      const oddsFormatter = new Intl.NumberFormat("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const dateFormatter = new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "2-digit", year: "numeric" });
+      const shortDateFormatter = new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "short" });
+
+      const segmentDefinitions = {
+        category: [
+          { key: "free", label: "Free" },
+          { key: "premium", label: "Premium" },
+          { key: "highConfidence", label: "High Confidence" },
+        ],
+        surface: [
+          { key: "hard", label: "Hard" },
+          { key: "clay", label: "Clay" },
+          { key: "grass", label: "Grass" },
+        ],
+        circuit: [
+          { key: "atp", label: "ATP" },
+          { key: "wta", label: "WTA" },
+        ],
+      };
+
+      const segmentIcons = {
+        free: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg>',
+        premium: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3.5 5.5L22 10l-4.5 4.5L18.5 21 12 18l-6.5 3 1-6.5L2 10l6.5-1.5L12 3Z"/></svg>',
+        highConfidence: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-5"/></svg>',
+        atp: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M5 5H3v2a4 4 0 0 0 4 4"/><path d="M19 5h2v2a4 4 0 0 1-4 4"/></svg>',
+        wta: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5 5.5.8-4 3.9.9 5.5L12 15.6 7.2 18.2l.9-5.5-4-3.9 5.5-.8L12 3Z"/><path d="M12 16v5"/><path d="M9 21h6"/></svg>',
+        hard: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16"/><path d="M12 4v16"/></svg>',
+        clay: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16c4-5 12-5 16 0"/><path d="M6 19c3-3 9-3 12 0"/><path d="M8 12c2-2 6-2 8 0"/></svg>',
+        grass: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c3-7 3-11 1-16"/><path d="M12 20c2-7 2-11 0-16"/><path d="M20 20c-3-7-3-11-1-16"/><path d="M2 20h20"/></svg>',
+      };
+
+      function getNumber(value) {
+        const number = Number(value);
+        return Number.isFinite(number) ? number : null;
+      }
+
+      function formatNumber(value) {
+        const number = getNumber(value);
+        return number === null ? "--" : numberFormatter.format(number);
+      }
+
+      function formatEuro(value, withSign = false) {
+        const number = getNumber(value);
+        if (number === null) return "--";
+        const sign = withSign && number > 0 ? "+" : "";
+        return `${sign}${euroFormatter.format(number)}€`;
+      }
+
+      function formatPercent(value) {
+        const number = getNumber(value);
+        return number === null ? "--" : `${percentFormatter.format(number)}%`;
+      }
+
+      function formatDate(value) {
+        const date = new Date(value);
+        return Number.isNaN(date.getTime()) ? "--" : dateFormatter.format(date);
+      }
+
+      function normalizeStats(payload) {
+        const totalPicks = getNumber(payload?.totalPicks);
+        const wonPicks = getNumber(payload?.wonPicks);
+        const lostPicks = getNumber(payload?.lostPicks) ?? (
+          totalPicks !== null && wonPicks !== null ? Math.max(totalPicks - wonPicks, 0) : null
+        );
+        const bankrollHistory = Array.isArray(payload?.bankrollHistory)
+          ? payload.bankrollHistory
+              .map((entry, index) => ({
+                date: entry?.date || `Point ${index + 1}`,
+                value: getNumber(entry?.value),
+              }))
+              .filter((entry) => entry.value !== null)
+          : [];
+
+        return {
+          raw: payload || {},
+          updatedAt: payload?.updatedAt || null,
+          accuracy: getNumber(payload?.accuracy),
+          totalPicks,
+          wonPicks,
+          lostPicks,
+          profit: getNumber(payload?.profit),
+          roi: getNumber(payload?.roi),
+          totalStake: getNumber(payload?.totalStake),
+          averageOdds: getNumber(payload?.averageOdds),
+          bankroll: getNumber(payload?.bankroll),
+          bankrollHistory,
+        };
+      }
+
+      async function fetchStats() {
+        if (!STATS_API_URL) throw new Error("Stats API missing");
+        const response = await fetch(STATS_API_URL, {
+          headers: { Accept: "application/json" },
+          cache: "no-store",
+        });
+        if (!response.ok) throw new Error(`Stats endpoint returned ${response.status}`);
+        return normalizeStats(await response.json());
+      }
+
+      function setText(selector, value) {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = value;
+      }
+
+      function aggregateDailyBankrollHistory(history) {
+        const daily = new Map();
+        history.forEach((entry, index) => {
+          const date = new Date(entry.date);
+          const dayKey = Number.isNaN(date.getTime()) ? `entry-${index}` : date.toISOString().slice(0, 10);
+          daily.set(dayKey, { date: entry.date, value: entry.value });
+        });
+        return [...daily.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([, entry]) => entry);
+      }
+
+      function smoothPath(points) {
+        if (points.length < 2) return "";
+        const commands = [`M${points[0][0].toFixed(1)} ${points[0][1].toFixed(1)}`];
+        for (let index = 0; index < points.length - 1; index += 1) {
+          const previous = points[index - 1] || points[index];
+          const current = points[index];
+          const next = points[index + 1];
+          const afterNext = points[index + 2] || next;
+          const smoothing = 0.18;
+          const controlA = [
+            current[0] + (next[0] - previous[0]) * smoothing,
+            current[1] + (next[1] - previous[1]) * smoothing,
+          ];
+          const controlB = [
+            next[0] - (afterNext[0] - current[0]) * smoothing,
+            next[1] - (afterNext[1] - current[1]) * smoothing,
+          ];
+          commands.push(
+            `C${controlA[0].toFixed(1)} ${controlA[1].toFixed(1)}, ${controlB[0].toFixed(1)} ${controlB[1].toFixed(1)}, ${next[0].toFixed(1)} ${next[1].toFixed(1)}`
+          );
+        }
+        return commands.join(" ");
+      }
+
+      function renderKpis(stats) {
+        setText("[data-stats-updated]", `Dernière mise à jour : ${formatDate(stats.updatedAt)}`);
+        setText('[data-stats-kpi="accuracy"]', formatPercent(stats.accuracy));
+        setText('[data-stats-kpi="profit"]', formatEuro(stats.profit, true));
+        setText('[data-stats-kpi="total-stake"]', formatEuro(stats.totalStake));
+        setText(
+          '[data-stats-kpi-detail="accuracy"]',
+          `${formatNumber(stats.totalPicks)} sélections • ${formatNumber(stats.wonPicks)} correctes`
+        );
+        setText('[data-stats-kpi-detail="roi"]', `ROI : ${formatPercent(stats.roi)}`);
+        setText(
+          '[data-stats-kpi-detail="average-odds"]',
+          `Cote moyenne : ${stats.averageOdds === null ? "--" : oddsFormatter.format(stats.averageOdds)}`
+        );
+      }
+
+      function renderChart(stats) {
+        const line = document.querySelector("[data-stats-chart-line]");
+        const area = document.querySelector("[data-stats-chart-area]");
+        const pointsLayer = document.querySelector("[data-stats-chart-points]");
+        const gridLayer = document.querySelector("[data-stats-chart-grid]");
+        const labelLayer = document.querySelector("[data-stats-chart-labels]");
+        const history = aggregateDailyBankrollHistory(stats.bankrollHistory);
+        if (!line || !area || !pointsLayer || !gridLayer || !labelLayer || history.length < 1) return;
+
+        const chartHistory = history.length === 1 ? [history[0], history[0]] : history;
+        const values = chartHistory.map((entry) => entry.value);
+        const width = 980;
+        const height = 320;
+        const padding = { top: 18, right: 10, bottom: 58, left: 42 };
+        const rawMin = Math.min(...values);
+        const rawMax = Math.max(...values);
+        const rawRange = Math.max(rawMax - rawMin, 1);
+        const valuePadding = Math.max(rawRange * 0.12, 25);
+        const min = rawMin - valuePadding;
+        const max = rawMax + valuePadding;
+        const range = Math.max(max - min, 1);
+        const xFor = (index) => padding.left + (index / (values.length - 1)) * (width - padding.left - padding.right);
+        const yFor = (value) => height - padding.bottom - ((value - min) / range) * (height - padding.top - padding.bottom);
+        const coords = values.map((value, index) => [xFor(index), yFor(value)]);
+        const path = smoothPath(coords);
+        const areaPath = `${path} L${coords.at(-1)[0].toFixed(1)} ${height - padding.bottom} L${coords[0][0].toFixed(1)} ${height - padding.bottom} Z`;
+        const tickCount = 4;
+        const step = range / tickCount;
+        const yTicks = Array.from({ length: tickCount + 1 }, (_, index) => min + step * index);
+        const xIndexes = chartHistory
+          .map((_, index) => index)
+          .filter((index) => index === 0 || index === chartHistory.length - 1 || index % 3 === 0);
+
+        line.setAttribute("d", path);
+        area.setAttribute("d", areaPath);
+        gridLayer.innerHTML = [
+          ...yTicks.map((tick) => {
+            const y = yFor(tick).toFixed(1);
+            return `<line x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>`;
+          }),
+          ...xIndexes.map((index) => {
+            const x = xFor(index).toFixed(1);
+            return `<line x1="${x}" y1="${padding.top}" x2="${x}" y2="${height - padding.bottom}"></line>`;
+          }),
+        ].join("");
+        pointsLayer.innerHTML = coords
+          .map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4"></circle>`)
+          .join("");
+        labelLayer.innerHTML = [
+          ...yTicks.map((tick) => {
+            const y = yFor(tick).toFixed(1);
+            return `<text x="${padding.left - 12}" y="${y}" text-anchor="end">${euroFormatter.format(tick)}€</text>`;
+          }),
+          ...xIndexes.map((index) => {
+            const x = xFor(index).toFixed(1);
+            const y = height - 26;
+            const date = new Date(chartHistory[index]?.date);
+            const label = Number.isNaN(date.getTime()) ? `P${index + 1}` : shortDateFormatter.format(date);
+            return `<text x="${x}" y="${y}" text-anchor="end" transform="rotate(-35 ${x} ${y})">${label}</text>`;
+          }),
+        ].join("");
+      }
+
+      function getSegmentSource(raw, group) {
+        const maps = {
+          category: [raw.categories, raw.byCategory, raw.performanceByCategory, raw.categoryStats],
+          surface: [raw.surfaces, raw.bySurface, raw.performanceBySurface, raw.surfaceStats],
+          circuit: [raw.circuits, raw.byCircuit, raw.performanceByCircuit, raw.circuitStats],
+        };
+        return maps[group]?.find((item) => item && typeof item === "object") || null;
+      }
+
+      function readSegment(source, key) {
+        if (!source) return null;
+        const aliases = {
+          highConfidence: ["highConfidence", "high_confidence", "high-confidence", "HIGH_CONFIDENCE", "High Confidence"],
+          premium: ["premium", "Premium", "VIP", "vip"],
+          free: ["free", "Free", "FREE"],
+          hard: ["hard", "Hard", "HARD"],
+          clay: ["clay", "Clay", "CLAY"],
+          grass: ["grass", "Grass", "GRASS"],
+          atp: ["atp", "ATP"],
+          wta: ["wta", "WTA"],
+        };
+        return (aliases[key] || [key]).map((alias) => source[alias]).find(Boolean) || null;
+      }
+
+      function renderSegmentCard(stats, group, key, label) {
+        const source = getSegmentSource(stats.raw, group);
+        const segment = readSegment(source, key);
+        if (!segment) {
+          return `
+            <article class="stats-segment-card unavailable">
+              <span class="stats-segment-icon">${segmentIcons[key] || segmentIcons.free}</span>
+              <h4>${label}</h4>
+              <strong>--</strong>
+              <p>--</p>
+            </article>
+          `;
+        }
+        const picks = getNumber(segment.picks ?? segment.totalPicks ?? segment.total ?? segment.count);
+        const won = getNumber(segment.won ?? segment.wonPicks ?? segment.wins ?? segment.correct ?? segment.correctPicks);
+        const accuracy = getNumber(segment.accuracy);
+        const hasPicks = picks !== null && picks > 0;
+        const displayedAccuracy = hasPicks && accuracy !== null ? formatPercent(accuracy) : "--";
+        const pickRatio = hasPicks && won !== null ? `${formatNumber(won)} / ${formatNumber(picks)}` : "--";
+        return `
+          <article class="stats-segment-card">
+            <span class="stats-segment-icon">${segmentIcons[key] || segmentIcons.free}</span>
+            <h4>${label}</h4>
+            <strong>${displayedAccuracy}</strong>
+            <p>${pickRatio}</p>
+          </article>
+        `;
+      }
+
+      function renderSegmentGroup(stats, group) {
+        const container = document.querySelector(`[data-segment-group="${group}"]`);
+        if (!container) return;
+        container.innerHTML = segmentDefinitions[group]
+          .map(({ key, label }) => renderSegmentCard(stats, group, key, label))
+          .join("");
+      }
+
+      function renderMonthlyHistory(stats) {
+        const tbody = document.querySelector("[data-monthly-history]");
+        if (!tbody) return;
+        const rows = stats.raw.monthlyHistory || stats.raw.monthlyStats || stats.raw.months || stats.raw.byMonth;
+        if (!Array.isArray(rows) || rows.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="5">Bientôt disponible</td></tr>`;
+          return;
+        }
+        tbody.innerHTML = rows
+          .map((row) => `
+            <tr>
+              <td>${row.month || row.label || "--"}</td>
+              <td>${formatNumber(row.picks ?? row.totalPicks ?? row.total ?? row.count)}</td>
+              <td>${formatPercent(row.accuracy)}</td>
+              <td>${formatPercent(row.roi)}</td>
+              <td class="${getNumber(row.profit) >= 0 ? "profit-positive" : "profit-negative"}">${formatEuro(row.profit, true)}</td>
+            </tr>
+          `)
+          .join("");
+      }
+
+      function renderUnavailableState(error) {
+        console.warn("Tennoro stats page unavailable:", error);
+        setText("[data-stats-updated]", "Dernière mise à jour : indisponible");
+        document.querySelectorAll("[data-segment-group]").forEach((container) => {
+          container.innerHTML = `<article class="stats-segment-card unavailable"><span>Données</span><h4>Statistiques détaillées</h4><p>Bientôt disponible</p></article>`;
+        });
+        const tbody = document.querySelector("[data-monthly-history]");
+        if (tbody) tbody.innerHTML = `<tr><td colspan="5">Bientôt disponible</td></tr>`;
+      }
+
+      fetchStats()
+        .then((stats) => {
+          renderKpis(stats);
+          renderChart(stats);
+          renderSegmentGroup(stats, "category");
+          renderSegmentGroup(stats, "circuit");
+          renderSegmentGroup(stats, "surface");
+          renderMonthlyHistory(stats);
+        })
+        .catch(renderUnavailableState);
+    </script>
+  </body>
+</html>
