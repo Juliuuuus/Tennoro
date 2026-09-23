@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tennoro.com/</loc></url>
-  <url><loc>https://tennoro.com/stats/</loc></url>
-  <url><loc>https://tennoro.com/dailypick/</loc></url>
-  <url><loc>https://tennoro.com/cgu.html</loc></url>
-  <url><loc>https://tennoro.com/confidentialite.html</loc></url>
-  <url><loc>https://tennoro.com/cgv.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://tennoro.com/fr/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/"/></url>
+  <url><loc>https://tennoro.com/en/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/"/></url>
+  <url><loc>https://tennoro.com/fr/stats/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/stats/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/stats/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/stats/"/></url>
+  <url><loc>https://tennoro.com/en/stats/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/stats/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/stats/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/stats/"/></url>
+  <url><loc>https://tennoro.com/fr/dailypick/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/dailypick/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/dailypick/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/dailypick/"/></url>
+  <url><loc>https://tennoro.com/en/dailypick/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/dailypick/"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/dailypick/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/dailypick/"/></url>
+  <url><loc>https://tennoro.com/fr/cgu.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/cgu.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/cgu.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/cgu.html"/></url>
+  <url><loc>https://tennoro.com/en/cgu.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/cgu.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/cgu.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/cgu.html"/></url>
+  <url><loc>https://tennoro.com/fr/cgv.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/cgv.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/cgv.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/cgv.html"/></url>
+  <url><loc>https://tennoro.com/en/cgv.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/cgv.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/cgv.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/cgv.html"/></url>
+  <url><loc>https://tennoro.com/fr/confidentialite.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/confidentialite.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/confidentialite.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/confidentialite.html"/></url>
+  <url><loc>https://tennoro.com/en/confidentialite.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/confidentialite.html"/><xhtml:link rel="alternate" hreflang="en" href="https://tennoro.com/en/confidentialite.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://tennoro.com/confidentialite.html"/></url>
 </urlset>

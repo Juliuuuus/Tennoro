@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import { validatePayload } from '../dailypick/pick-data.mjs';
+import { messages } from '../i18n/messages.mjs';
 
 const fixture = JSON.parse(await readFile(new URL('../dailypick/pick.mock.json', import.meta.url), 'utf8'));
 const source = await readFile(new URL('../dailypick/pick.js', import.meta.url), 'utf8');
@@ -36,7 +37,7 @@ test('history renderer shows only the latest 24 settled results without summary 
   }
   const nodes = new Map();
   const $ = (id) => { if (!nodes.has(id)) nodes.set(id, element('div')); return nodes.get(id); };
-  const context = { $, el: element, metric: (label, value) => element('metric', `${label}:${value}`),
+  const context = { $, t: (key, params={}) => messages.fr[key].replace(/\{(\w+)\}/g, (_,k)=>params[k]??''), el: element, metric: (label, value) => element('metric', `${label}:${value}`),
     n: String, percent: String, dateText: (value) => value };
   const start = source.indexOf('function renderHistory(data)');
   const end = source.indexOf('const demo =', start);
