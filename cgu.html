@@ -1,12 +1,22 @@
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>(()=>{const aliases={"index.html":"","stats.html":"stats/","pronostics-tennis/":"dailypick/","daily-pick/":"dailypick/"};function preferredLanguage(saved, browserLanguage) {
+  if(['fr','en'].includes(saved))return saved;
+  return /^fr(?:-|$)/i.test(browserLanguage || '')?'fr':'en';
+};function localizedPath(path, lang) {
+  let suffix=path.replace(/^\/(?:fr|en)(?=\/|$)/,'').replace(/^\//,'');
+  suffix=aliases[suffix]??suffix;
+  return '/'+lang+'/'+suffix;
+};let saved=null;try{saved=localStorage.getItem('tennoro-language');}catch{}const explicit=location.pathname.match(/^\/(fr|en)(?:\/|$)/)?.[1];const lang=explicit||preferredLanguage(saved,navigator.language);const target=localizedPath(location.pathname,lang)+location.search+location.hash;if(target!==location.pathname+location.search+location.hash)location.replace(target);})();</script>
 <title>Tennoro — Choose your language</title>
 <link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/cgu.html" />
 <link rel="alternate" hreflang="en" href="https://tennoro.com/en/cgu.html" />
 <link rel="alternate" hreflang="x-default" href="https://tennoro.com/cgu.html" />
+<style>html{background:#080808;color:#fff}</style>
+<noscript>
 <link rel="stylesheet" href="/styles.css" />
-<script type="module" src="/i18n/redirect.mjs"></script>
-</head><body><main class="container" style="padding-top:120px;text-align:center">
+</noscript>
+</head><body><noscript><main class="container" style="padding-top:120px;text-align:center">
 <h1 style="font-size:2rem">Choose your language / <span lang="fr">Choisissez votre langue</span></h1>
 <p><a class="button button-secondary" href="/fr/cgu.html" data-language="fr" lang="fr">FR — Français</a> <a class="button button-secondary" href="/en/cgu.html" data-language="en" lang="en">EN — English</a></p>
-</main></body></html>
+</main></noscript></body></html>

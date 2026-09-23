@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {dirname} from 'node:path';
-import {routes, aliases} from '../i18n/routes.mjs';
+import {routes, aliases, preferredLanguage, localizedPath} from '../i18n/routes.mjs';
 import {messages,reasonPatterns,monthNames} from '../i18n/messages.mjs';
 import {withGtm} from './gtm.mjs';
 const origin='https://tennoro.com';
@@ -36,16 +36,20 @@ for(const lang of ['fr','en']){
  }
 }
 function redirect(route){
+ const redirectScript=`(()=>{const aliases=${JSON.stringify(aliases)};${preferredLanguage.toString()};${localizedPath.toString()};let saved=null;try{saved=localStorage.getItem('tennoro-language');}catch{}const explicit=location.pathname.match(/^\\/(fr|en)(?:\\/|$)/)?.[1];const lang=explicit||preferredLanguage(saved,navigator.language);const target=localizedPath(location.pathname,lang)+location.search+location.hash;if(target!==location.pathname+location.search+location.hash)location.replace(target);})();`;
  return `<!doctype html>
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>${redirectScript}</script>
 <title>${messages.en.redirectTitle}</title>
 ${alternates(route)}
+<style>html{background:#080808;color:#fff}</style>
+<noscript>
 <link rel="stylesheet" href="/styles.css" />
-<script type="module" src="/i18n/redirect.mjs"></script>
-</head><body><main class="container" style="padding-top:120px;text-align:center">
+</noscript>
+</head><body><noscript><main class="container" style="padding-top:120px;text-align:center">
 <h1 style="font-size:2rem">${messages.en.redirect} / <span lang="fr">${messages.fr.redirect}</span></h1>
 <p><a class="button button-secondary" href="/fr/${route}" data-language="fr" lang="fr">FR — Français</a> <a class="button button-secondary" href="/en/${route}" data-language="en" lang="en">EN — English</a></p>
-</main></body></html>\n`;
+</main></noscript></body></html>\n`;
 }
 for(const route of Object.values(routes))write(route===''?'index.html':route.endsWith('/')?route+'index.html':route,redirect(route));
 for(const [alias,target]of Object.entries(aliases)){
