@@ -5,28 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Tennoro analyse les matchs ATP et WTA avec un modèle statistique transparent."
+      content="Tennoro analyse chaque jour les matchs de tennis ATP et WTA grâce aux données. Découvrez les sélections du modèle statistique et ses performances suivies."
     />
-    <title>Tennoro - Signaux tennis ATP &amp; WTA</title>
+    <title>Tennoro — Analyse &amp; Prédictions Tennis ATP/WTA</title>
+    <link rel="canonical" href="https://tennoro.com/" />
+    <meta property="og:title" content="Tennoro — Analyse &amp; Prédictions Tennis ATP/WTA" />
+    <meta property="og:description" content="Tennoro analyse chaque jour les matchs de tennis ATP et WTA grâce aux données. Découvrez les sélections du modèle statistique et ses performances suivies." />
+    <meta property="og:url" content="https://tennoro.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tennoro" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="https://tennoro.com/assets/tennoro-logo.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Logo Tennoro" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tennoro — Analyse &amp; Prédictions Tennis ATP/WTA" />
+    <meta name="twitter:description" content="Tennoro analyse chaque jour les matchs de tennis ATP et WTA grâce aux données. Découvrez les sélections du modèle statistique et ses performances suivies." />
+    <meta name="twitter:image" content="https://tennoro.com/assets/tennoro-logo.png" />
+    <meta name="twitter:image:alt" content="Logo Tennoro" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tennoro.com/#organization",
+            "name": "Tennoro",
+            "url": "https://tennoro.com/",
+            "logo": "https://tennoro.com/assets/tennoro-logo.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tennoro.com/#website",
+            "name": "Tennoro",
+            "url": "https://tennoro.com/",
+            "inLanguage": "fr",
+            "publisher": { "@id": "https://tennoro.com/#organization" }
+          }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/png" href="./assets/favicon_tennoro.png">
-    <script src="./stats-config.js"></script>
+    <link rel="apple-touch-icon" href="./assets/favicon_tennoro.png" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Navigation principale">
         <a class="brand" href="#top" aria-label="Tennoro accueil">
-          <img src="./assets/tennoro-logo.png" alt="" />
+          <img src="./assets/tennoro-logo.png" alt="" width="38" height="38" />
           <span>Tennoro</span>
         </a>
 
         <div class="nav-links">
-          <a href="./stats/index.html">Stats</a>
+          <a href="./stats/">Stats</a>
           <a href="#technologie">Technologie</a>
           <a href="#vip">Pricing</a>
           <a href="#faq">FAQ</a>
         </div>
 
+        <a class="mobile-stats-link" href="./stats/">Stats</a>
         <a class="nav-cta" href="https://discord.gg/HUsTT7X5Pn">Discord</a>
       </nav>
     </header>
@@ -51,7 +90,7 @@
 
           <div class="hero-actions reveal-on-scroll">
             <a class="button button-primary button-discord" href="https://discord.gg/HUsTT7X5Pn">
-              <img src="./assets/discord-icon.png" alt="" />
+              <img src="./assets/discord-icon.png" alt="" width="22" height="22" />
               <span>Rejoindre Tennoro</span>
             </a>
           </div>
@@ -337,7 +376,7 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="Tennoro accueil">
-            <img src="./assets/tennoro-logo.png" alt="" />
+            <img src="./assets/tennoro-logo.png" alt="" width="38" height="38" loading="lazy" decoding="async" />
             <span>Tennoro</span>
           </a>
           <p>Analyses tennis ATP &amp; WTA basées sur les données.</p>
@@ -348,11 +387,12 @@
           <a href="https://app.notion.com/p/Conditions-G-n-rales-d-Utilisation-CGU-Tennoro-3789ee83b618803888a6c2bb2534d85a">CGU</a>
           <a href="https://app.notion.com/p/Politique-de-Confidentialit-Tennoro-3789ee83b6188089b44ad5f4073d7315">Politique de confidentialité</a>
           <a href="https://app.notion.com/p/Conditions-G-n-rales-de-Vente-CGV-Tennoro-3789ee83b61880c59d78fdbc78d5579b">CGV</a>
-          <a href="https://discord.gg/HUsTT7X5Pn">Contact</a>
+          <a href="./contact.html">Contact</a>
         </div>
       </div>
     </footer>
 
+    <script src="./stats-config.js"></script>
     <script>
       const VIP_CHECKOUT_URL = window.TENNORO_CONFIG?.vipCheckoutUrl || "";
       const vipButton = document.querySelector("[data-vip-link]");

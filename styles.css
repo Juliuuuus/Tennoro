@@ -138,6 +138,13 @@ a {
   box-shadow: 0 10px 28px rgba(200, 69, 12, 0.18);
 }
 
+.mobile-stats-link {
+  display: none;
+  margin-left: auto;
+  color: #fff;
+  font-weight: 800;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -556,7 +563,8 @@ h3 {
     box-shadow 220ms ease;
 }
 
-.profit-dashboard h3 {
+.profit-dashboard h3,
+.profit-dashboard h2 {
   margin: 0 0 10px;
   color: var(--muted);
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
@@ -747,7 +755,8 @@ h3 {
   font-size: 0.94rem;
 }
 
-.stats-chart-panel h3 {
+.stats-chart-panel h3,
+.stats-chart-panel h2 {
   font-size: clamp(1.05rem, 2.2vw, 1.35rem);
 }
 
@@ -830,10 +839,14 @@ h3 {
   margin-bottom: 16px;
 }
 
-.stats-detail-title h3 {
+.stats-detail-title h3,
+.stats-detail-title h2 {
   margin: 0;
   color: #fff;
   font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 .stats-segment-grid {
@@ -1518,6 +1531,13 @@ h3 {
 
   .nav-links {
     display: none;
+  }
+
+  .mobile-stats-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 8px;
   }
 
   .performance-grid,

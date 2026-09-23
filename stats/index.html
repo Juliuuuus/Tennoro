@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Statistiques publiques Tennoro : précision, ROI, bankroll, profit et performances détaillées."
+      content="Consultez les performances du modèle Tennoro : précision, ROI, profit, résultats ATP/WTA, statistiques par surface et historique mensuel des sélections."
     />
-    <title>Statistiques - Tennoro</title>
+    <title>Statistiques &amp; Performances — Tennoro</title>
+    <link rel="canonical" href="https://tennoro.com/stats/" />
+    <meta property="og:title" content="Statistiques &amp; Performances — Tennoro" />
+    <meta property="og:description" content="Consultez les performances du modèle Tennoro : précision, ROI, profit, résultats ATP/WTA, statistiques par surface et historique mensuel des sélections." />
+    <meta property="og:url" content="https://tennoro.com/stats/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tennoro" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:image" content="https://tennoro.com/assets/tennoro-logo.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Logo Tennoro" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Statistiques &amp; Performances — Tennoro" />
+    <meta name="twitter:description" content="Consultez les performances du modèle Tennoro : précision, ROI, profit, résultats ATP/WTA, statistiques par surface et historique mensuel des sélections." />
+    <meta name="twitter:image" content="https://tennoro.com/assets/tennoro-logo.png" />
+    <meta name="twitter:image:alt" content="Logo Tennoro" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" type="image/png" href="../assets/favicon_tennoro.png" />
-    <script src="../stats-config.js"></script>
+    <link rel="apple-touch-icon" href="../assets/favicon_tennoro.png" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Navigation principale">
-        <a class="brand" href="../index.html#top" aria-label="Tennoro accueil">
-          <img src="../assets/tennoro-logo.png" alt="" />
+        <a class="brand" href="../#top" aria-label="Tennoro accueil">
+          <img src="../assets/tennoro-logo.png" alt="" width="38" height="38" />
           <span>Tennoro</span>
         </a>
 
         <div class="nav-links">
-          <a href="./index.html">Stats</a>
-          <a href="../index.html#technologie">Technologie</a>
-          <a href="../index.html#vip">Pricing</a>
-          <a href="../index.html#faq">FAQ</a>
+          <a href="./" aria-current="page">Stats</a>
+          <a href="../#technologie">Technologie</a>
+          <a href="../#vip">Pricing</a>
+          <a href="../#faq">FAQ</a>
         </div>
 
         <a class="nav-cta" href="https://discord.gg/HUsTT7X5Pn">Discord</a>
@@ -97,7 +113,7 @@
       <section class="stats-section">
         <div class="container">
           <div class="profit-dashboard stats-chart-panel">
-            <h3>Évolution du profit</h3>
+            <h2>Évolution du profit</h2>
 
             <svg class="profit-chart stats-bankroll-chart" viewBox="0 0 980 320" role="img" aria-labelledby="stats-chart-title">
               <title id="stats-chart-title">Évolution du profit Tennoro</title>
@@ -115,7 +131,7 @@
         <div class="container">
           <div class="stats-table-card">
             <div class="stats-detail-title">
-              <h3>Historique mensuel</h3>
+              <h2>Historique mensuel</h2>
             </div>
             <div class="stats-table-wrap">
               <table class="stats-table">
@@ -154,8 +170,8 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="../index.html#top" aria-label="Tennoro accueil">
-            <img src="../assets/tennoro-logo.png" alt="" />
+          <a class="brand" href="../#top" aria-label="Tennoro accueil">
+            <img src="../assets/tennoro-logo.png" alt="" width="38" height="38" loading="lazy" decoding="async" />
             <span>Tennoro</span>
           </a>
           <p>Analyses tennis ATP &amp; WTA basées sur les données.</p>
@@ -166,11 +182,12 @@
           <a href="https://app.notion.com/p/Conditions-G-n-rales-d-Utilisation-CGU-Tennoro-3789ee83b618803888a6c2bb2534d85a">CGU</a>
           <a href="https://app.notion.com/p/Politique-de-Confidentialit-Tennoro-3789ee83b6188089b44ad5f4073d7315">Politique de confidentialité</a>
           <a href="https://app.notion.com/p/Conditions-G-n-rales-de-Vente-CGV-Tennoro-3789ee83b61880c59d78fdbc78d5579b">CGV</a>
-          <a href="https://discord.gg/HUsTT7X5Pn">Contact</a>
+          <a href="../contact.html">Contact</a>
         </div>
       </div>
     </footer>
 
+    <script src="../stats-config.js"></script>
     <script>
       const STATS_API_URL = window.TENNORO_CONFIG?.statsApiUrl || "";
       const numberFormatter = new Intl.NumberFormat("fr-FR");
@@ -464,6 +481,8 @@
           return;
         }
         tbody.innerHTML = rows
+          .slice()
+          .reverse()
           .map((row) => `
             <tr>
               <td>${row.month || row.label || "--"}</td>
