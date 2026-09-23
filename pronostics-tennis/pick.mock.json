@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "isDemo": true,
+  "date": "2026-09-23",
+  "updatedAt": "2026-09-23T08:00:00Z",
+  "timezone": "Europe/Paris",
+  "status": "pick",
+  "pick": {
+    "match": {
+      "id": "demo-match-01",
+      "tour": "ATP",
+      "tournament": "Open Démo — tournoi fictif",
+      "surface": "hard",
+      "startsAt": "2026-09-23T16:30:00+02:00",
+      "status": "scheduled"
+    },
+    "players": [
+      {
+        "id": "demo-a",
+        "name": "Alex Exemple",
+        "ranking": 42,
+        "scoreTennoro": 84,
+        "eloGlobal": 1872,
+        "eloSurface": 1905,
+        "recentForm": 69,
+        "surfaceForm": 72,
+        "matchesLast30Days": 6,
+        "restDays": 13
+      },
+      {
+        "id": "demo-b",
+        "name": "Robin Démo",
+        "ranking": 91,
+        "scoreTennoro": 61,
+        "eloGlobal": 1536,
+        "eloSurface": 1580,
+        "recentForm": 38,
+        "surfaceForm": 44,
+        "matchesLast30Days": 9,
+        "restDays": 2
+      }
+    ],
+    "selection": {
+      "playerId": "demo-a",
+      "market": "match_winner"
+    },
+    "confidence": 86,
+    "odds": 1.55,
+    "modelProbability": 70,
+    "marketProbability": 64.5,
+    "edge": 5.5,
+    "h2h": {
+      "playerAWins": 2,
+      "playerBWins": 1
+    },
+    "reasons": [
+      "Avantage Elo — 1872 contre 1536",
+      "Meilleure forme récente — 69 % contre 38 %",
+      "Meilleure récupération — 13 jours contre 2"
+    ]
+  },
+  "history": [
+    {
+      "id": "demo-history-3",
+      "date": "2026-09-22",
+      "playerA": "Camille Exemple",
+      "playerB": "Lou Démo",
+      "selection": "Camille Exemple",
+      "odds": 1.6,
+      "confidence": 82,
+      "result": "won"
+    },
+    {
+      "id": "demo-history-2",
+      "date": "2026-09-21",
+      "playerA": "Morgan Démo",
+      "playerB": "Sacha Exemple",
+      "selection": "Sacha Exemple",
+      "odds": 1.5,
+      "confidence": 80,
+      "result": "lost"
+    },
+    {
+      "id": "demo-history-1",
+      "date": "2026-09-20",
+      "playerA": "Charlie Exemple",
+      "playerB": "Sam Démo",
+      "selection": "Charlie Exemple",
+      "odds": 1.7,
+      "confidence": 84,
+      "result": "void"
+    }
+  ],
+  "freePickStats": {
+    "picks": 3,
+    "accuracy": 50,
+    "roi": -20,
+    "averageOdds": 1.55,
+    "from": "2026-09-20",
+    "to": "2026-09-22"
+  }
+}
