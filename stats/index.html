@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="Consultez les performances du modèle Tennoro : précision, ROI, profit, résultats ATP/WTA, statistiques par surface et historique mensuel des sélections." />
     <meta name="twitter:image" content="https://tennoro.com/assets/tennoro-logo.png" />
     <meta name="twitter:image:alt" content="Logo Tennoro" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=20260923-mobile2" />
     <link rel="icon" type="image/png" href="../assets/favicon_tennoro.png" />
     <link rel="apple-touch-icon" href="../assets/favicon_tennoro.png" />
   </head>
@@ -43,6 +43,15 @@
           <a href="../#faq">FAQ</a>
         </div>
 
+        <details class="mobile-menu">
+          <summary>Menu</summary>
+          <div class="mobile-menu-links">
+            <a href="../">Accueil</a>
+            <a href="../#technologie">Technologie</a>
+            <a href="../#vip">Tarifs</a>
+            <a href="../#faq">FAQ</a>
+          </div>
+        </details>
         <a class="nav-cta" href="https://discord.gg/HUsTT7X5Pn">Discord</a>
       </nav>
     </header>
@@ -133,7 +142,8 @@
             <div class="stats-detail-title">
               <h2>Historique mensuel</h2>
             </div>
-            <div class="stats-table-wrap">
+            <p class="table-hint" id="monthly-scroll-hint">Faites glisser le tableau pour voir tous les résultats.</p>
+            <div class="stats-table-wrap" tabindex="0" role="region" aria-label="Historique mensuel des performances" aria-describedby="monthly-scroll-hint">
               <table class="stats-table">
                 <thead>
                   <tr>

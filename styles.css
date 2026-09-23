@@ -1661,6 +1661,45 @@ h3 {
 
 }
 
+/* Mobile-only navigation and compact statistics; desktop styles stay unchanged. */
+.table-hint { display: none; font-size: 0.85rem; color: #b7b7b7; }
+.mobile-menu { display: none; }
+@media (max-width: 920px) {
+  .mobile-menu { display: block; margin-left: auto; }
+  .mobile-stats-link + .mobile-menu { margin-left: 0; }
+  .mobile-menu summary { cursor: pointer; padding: 12px 6px; color: #fff; font-weight: 750; }
+  .mobile-menu-links {
+    position: absolute; top: calc(100% + 10px); right: 0;
+    min-width: 210px; padding: 10px; border: 1px solid var(--line);
+    border-radius: 16px; background: #171717; box-shadow: 0 16px 36px #0008;
+  }
+  .mobile-menu-links a { display: block; padding: 12px 16px; border-radius: 8px; }
+  .mobile-menu-links a:hover { background: #ffffff0d; }
+  .mobile-menu summary:focus-visible, .mobile-menu a:focus-visible, .stats-table-wrap:focus-visible {
+    outline: 2px solid var(--clay-hot); outline-offset: 3px;
+  }
+  .performance-grid, .stats-kpi-grid, .stats-row-three,
+  .stats-segment-grid, .stats-segment-grid.compact { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .stats-row-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .performance-card { padding: 16px 10px; min-width: 0; }
+  .performance-card strong { font-size: clamp(1.2rem, 4.8vw, 2.5rem); }
+  .performance-card span { font-size: 0.68rem; }
+  .performance-card p, .stats-hero .performance-card p { font-size: 0.75rem; line-height: 1.45; margin: 8px 0 0; }
+  .stats-segment-card { padding: 12px 5px; min-height: 132px; min-width: 0; }
+  .stats-segment-icon { position: static; margin-bottom: 6px; }
+  .stats-segment-card h4 { font-size: 0.76rem; line-height: 1.25; min-height: 2.5em; display: grid; align-items: center; }
+  .stats-segment-card strong { font-size: clamp(1.1rem, 4.5vw, 2rem); margin-top: 8px; }
+  .stats-segment-card p { font-size: 0.75rem; }
+  .table-hint { display: block; }
+  .stats-table th:first-child, .stats-table td:first-child {
+    position: sticky; left: 0; background: #151515; z-index: 1;
+  }
+}
+@media (max-width: 620px) {
+  .nav-shell { gap: 10px; }
+  .nav-cta { padding: 10px 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
