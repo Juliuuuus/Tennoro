@@ -2,8 +2,8 @@
 
 ## Branchement futur (aucun backend modifié)
 
-Page statique : `/pronostics-tennis/`. Renseigner `PICK_API_URL` dans
-`pronostics-tennis/pick-config.mjs` avec l'URL HTTPS du futur endpoint public.
+Page statique : `/dailypick/`. Renseigner `PICK_API_URL` dans
+`dailypick/pick-config.mjs` avec l'URL HTTPS du futur endpoint public.
 GET JSON UTF-8, HTTP 200 pour `pick` **et** `no_pick`. Erreurs : HTTP 4xx/5xx.
 Ne pas envoyer de token privé au navigateur. Le JSON ne contient que le pick
 gratuit et des informations publiques, jamais les sélections VIP.
@@ -105,7 +105,7 @@ pas que ces agrégats portent seulement sur les cartes visibles.
 
 ## Exemple complet
 
-`pronostics-tennis/pick.mock.json` est l'exemple complet du contrat, avec tous les
+`dailypick/pick.mock.json` est l'exemple complet du contrat, avec tous les
 champs et trois résultats (gagné/perdu/void). **Tout son contenu est fictif**.
 Pour une vraie réponse, utiliser des données réelles, `isDemo: false` et la date
 du jour Europe/Paris. Ne jamais publier cet exemple comme réponse de production.
@@ -134,7 +134,7 @@ Sans raisons, utiliser `reasons: []` : l'interface signale leur indisponibilité
 Depuis la racine : `python -m http.server 3000 --bind 127.0.0.1` (si aucun serveur
 n'est déjà lancé). Ouvrir :
 
-- `http://127.0.0.1:3000/pronostics-tennis/?demo=1` : démonstration complète.
+- `http://127.0.0.1:3000/dailypick/?demo=1` : démonstration complète.
 - `?demo=1&scenario=empty` : aucun pick, historique conservé.
 - `?demo=1&scenario=partial` : champs optionnels inconnus et raisons absentes.
 - `?demo=1&scenario=error` : indisponibilité.

@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { validatePayload, loadPick, isDemoRequest, parisDate } from '../pronostics-tennis/pick-data.mjs';
-const fixture = JSON.parse(await readFile(new URL('../pronostics-tennis/pick.mock.json', import.meta.url), 'utf8'));
+import { validatePayload, loadPick, isDemoRequest, parisDate } from '../dailypick/pick-data.mjs';
+const fixture = JSON.parse(await readFile(new URL('../dailypick/pick.mock.json', import.meta.url), 'utf8'));
 const mock = () => structuredClone(fixture);
 const fetcher = async () => ({ok:true,json:async()=>mock()});
 test('demo is explicit and only loopback',()=>{

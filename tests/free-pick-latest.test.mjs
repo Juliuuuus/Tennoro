@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import vm from 'node:vm';
-import { validatePayload } from '../pronostics-tennis/pick-data.mjs';
+import { validatePayload } from '../dailypick/pick-data.mjs';
 
-const fixture = JSON.parse(await readFile(new URL('../pronostics-tennis/pick.mock.json', import.meta.url), 'utf8'));
-const source = await readFile(new URL('../pronostics-tennis/pick.js', import.meta.url), 'utf8');
+const fixture = JSON.parse(await readFile(new URL('../dailypick/pick.mock.json', import.meta.url), 'utf8'));
+const source = await readFile(new URL('../dailypick/pick.js', import.meta.url), 'utf8');
 
 test('unsettled recent pick accepts null, while omitted or invented results are rejected', () => {
   const data = structuredClone(fixture);
