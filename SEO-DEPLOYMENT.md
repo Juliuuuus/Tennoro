@@ -2,7 +2,7 @@
 
 ## Périmètre et audit initial
 
-Site statique GitHub Pages : index.html, stats/index.html, contact.html et stats.html (ancienne redirection). Aucun framework, workflow de build ou backend présent. CNAME contient déjà tennoro.com. Les corrections mobiles et l'ordre inversé des mois précédemment demandés sont conservés. Aucun push, déploiement, changement du bot, du modèle, du Selector ou de l'API.
+Site statique GitHub Pages : index.html, stats/index.html et stats.html (ancienne redirection). La page Contact a été supprimée après cet audit, avec ses liens internes et son entrée sitemap. Les constats historiques ci-dessous concernant Contact décrivent la version auditée avant suppression. Aucun framework, workflow de build ou backend présent. CNAME contient déjà tennoro.com. Les corrections mobiles et l'ordre inversé des mois précédemment demandés sont conservés. Aucun changement du bot, du modèle, du Selector ou de l'API.
 
 Constats : canonical absentes sur les trois pages principales ; canonical relative sur la redirection ; absence de robots.txt, sitemap, Open Graph, Twitter Cards et JSON-LD ; description d'accueil très courte ; page Contact non reliée par les liens Contact (ils menaient à Discord) ; favicon manquant sur Contact ; images sans dimensions HTML ; configuration des statistiques chargée dans le head ; deux sections de stats titrées en H3 au lieu de H2. Un H1 par vraie page était déjà présent, et le contenu expliquait déjà naturellement tennis, ATP/WTA, données et suivi des performances. Pas de réécriture nécessaire.
 
@@ -10,7 +10,6 @@ Constats : canonical absentes sur les trois pages principales ; canonical relati
 
 - Accueil : https://tennoro.com/
 - Statistiques : https://tennoro.com/stats/ (répertoire existant, slash final conforme à l'hébergement statique).
-- Contact : https://tennoro.com/contact.html (fichier existant, pas de nouvelle route inventée).
 - stats.html reste une redirection immédiate vers ./stats/, canonical vers https://tennoro.com/stats/, hors sitemap.
 - /index.html et /stats/index.html restent accessibles pour les anciens liens ; canonical et liens internes privilégient / et /stats/.
 
@@ -30,7 +29,7 @@ JSON-LD sur l'accueil : Organization et WebSite, limités à Tennoro, URL offici
 
 Créés : robots.txt, sitemap.xml, SEO-DEPLOYMENT.md.
 
-Modifiés : index.html, stats/index.html, contact.html, stats.html, styles.css.
+Modifiés lors de l'audit : index.html, stats/index.html, l'ancienne page Contact, stats.html, styles.css.
 
 Conservés sans modification : CNAME, stats-config.js, STATS_API_CONTRACT.md, images. Aucun outil analytics ajouté.
 
@@ -46,7 +45,7 @@ Conservés sans modification : CNAME, stats-config.js, STATS_API_CONTRACT.md, im
 
 ## Vérifications réalisées
 
-- HTTP 200 local : /, /stats/, /contact.html, /stats.html, robots.txt, sitemap.xml, favicon et logo.
+- HTTP 200 local lors de l'audit : /, /stats/, l'ancienne page Contact, /stats.html, robots.txt, sitemap.xml, favicon et logo.
 - 42 références locales et ancres vérifiées ; aucune cible manquante.
 - XML du sitemap et JSON-LD parsés, destinations du sitemap vérifiées sur disque.
 - Un H1 sur chaque vraie page, métadonnées présentes ; syntaxe des scripts inline vérifiée.
@@ -84,7 +83,7 @@ Une allowlist doit renvoyer une seule origin autorisée correspondant à l'en-t�
 1. Ouvrir Google Search Console et ajouter une propriété de type Domaine : tennoro.com (sans https ni chemin).
 2. Copier l'enregistrement TXT fourni par Google dans la zone DNS chez le gestionnaire du domaine. Ne pas remplacer les autres enregistrements. Attendre la propagation puis cliquer Vérifier ; conserver le TXT.
 3. Ouvrir https://tennoro.com/robots.txt et https://tennoro.com/sitemap.xml, vérifier qu'ils sont accessibles, puis envoyer https://tennoro.com/sitemap.xml dans la section Sitemaps.
-4. Inspecter https://tennoro.com/ avec l'outil Inspection de l'URL, tester l'URL publiée, puis demander l'indexation. Faire de même pour /stats/ et /contact.html si souhaité.
+4. Inspecter https://tennoro.com/ avec l'outil Inspection de l'URL, tester l'URL publiée, puis demander l'indexation. Faire de même pour /stats/ si souhaité.
 5. Consulter les rapports Indexation des pages et Sitemaps : erreurs HTTPS, 404, canonical choisie par Google, blocages et réponses serveur. Une demande d'indexation ne garantit ni indexation immédiate ni classement.
 
 Sources : https://support.google.com/webmasters/answer/10351509 ; https://support.google.com/webmasters/answer/7451001 ; https://support.google.com/webmasters/answer/9012289 ; https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https
