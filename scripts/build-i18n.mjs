@@ -41,6 +41,7 @@ function redirect(route){
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>${redirectScript}</script>
 <title>${messages.en.redirectTitle}</title>
+<link rel="icon" type="image/png" href="/assets/favicon-tennoro-outline.png" />
 ${alternates(route)}
 <style>html{background:#080808;color:#fff}</style>
 <noscript>
