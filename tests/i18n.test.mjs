@@ -20,7 +20,7 @@ test('equivalent pages and aliases do not cause redirect loops',()=>{
   }
   for(const [alias,target]of Object.entries(aliases))assert.equal(localizedPath('/'+alias,'en'),'/en/'+target);
 });
-test('all 12 static pages have localized SEO, navigation, assets and matching alternates',()=>{
+test('all 14 static pages have localized SEO, navigation, assets and matching alternates',()=>{
   for(const lang of ['fr','en'])for(const route of Object.values(routes)){
     const file=lang+'/'+route+(route===''||route.endsWith('/')?'index.html':'');
     const html=read(file), url='/'+lang+'/'+route;
@@ -64,8 +64,8 @@ test('API reasons and month names are localized without changing player data',()
   assert.equal(api.reasonText('Elo global enregistré : Talia Gibson 1570, Viktoria Morvayova 1493.'),'Recorded overall Elo: Talia Gibson 1570, Viktoria Morvayova 1493.');
   assert.equal(api.reasonText('Unrecognized API analysis'),null);
 });
-test('sitemap contains only the 12 localized canonical pages',()=>{
+test('sitemap contains only the 14 localized canonical pages',()=>{
   const urls=[...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
-  assert.equal(urls.length,12);assert.equal(new Set(urls).size,12);
+  assert.equal(urls.length,14);assert.equal(new Set(urls).size,14);
   assert.ok(urls.every(u=>/^https:\/\/tennoro.com\/(fr|en)\//.test(u)));
 });

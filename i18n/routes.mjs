@@ -1,4 +1,4 @@
-export const routes = {home:'',stats:'stats/',dailypick:'dailypick/',cgu:'cgu.html',cgv:'cgv.html',privacy:'confidentialite.html'};
+export const routes = {contact:'contact/',home:'',stats:'stats/',dailypick:'dailypick/',cgu:'cgu.html',cgv:'cgv.html',privacy:'confidentialite.html'};
 export const aliases = {'index.html':'', 'stats.html':'stats/', 'pronostics-tennis/':'dailypick/', 'daily-pick/':'dailypick/'};
 export function preferredLanguage(saved, browserLanguage) {
   if(['fr','en'].includes(saved))return saved;

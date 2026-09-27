@@ -6,7 +6,7 @@ import {routes} from '../i18n/routes.mjs';
 import {gtmHead,gtmBody} from '../scripts/gtm.mjs';
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 
-test('all 12 content pages include GTM once, first in head and body',()=>{
+test('all 14 content pages include GTM once, first in head and body',()=>{
   for(const lang of ['fr','en'])for(const route of Object.values(routes)){
     const html=read(`${lang}/${route}${!route||route.endsWith('/')?'index.html':''}`);
     assert.ok(html.includes('<head>\n'+gtmHead));

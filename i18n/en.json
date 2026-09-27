@@ -416,5 +416,11 @@
   "text415": "This Privacy Policy may be amended at any time to reflect changes to the service or legal obligations.",
   "text416": "The latest version is always the one published in Tennoro’s official documents.",
   "text417": "12. Contact",
-  "text418": "For any questions about this Privacy Policy or data processing, users may contact Tennoro through the official contact channels provided."
+  "text418": "For any questions about this Privacy Policy or data processing, users may contact Tennoro through the official contact channels provided.",
+  "contactLabel": "Contact",
+  "contactTitle": "Contact — Tennoro",
+  "contactDescription": "Email Tennoro with questions about the website, picks or your access.",
+  "contactIntro": "Have a question about Tennoro? Get in touch by email.",
+  "contactAction": "Send an email",
+  "contactHint": "This button opens your email app. You can also copy the address below."
 }

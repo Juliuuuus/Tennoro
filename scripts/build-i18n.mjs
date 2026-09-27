@@ -41,7 +41,7 @@ function redirect(route){
 <html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>${redirectScript}</script>
 <title>${messages.en.redirectTitle}</title>
-<link rel="icon" type="image/png" href="/assets/favicon-tennoro-outline.png" />
+<link rel="icon" type="image/png" href="/assets/favicon-tennoro-orange.png" />
 ${alternates(route)}
 <style>html{background:#080808;color:#fff}</style>
 <noscript>
@@ -61,4 +61,4 @@ for(const [alias,target]of Object.entries(aliases)){
 }
 const urls=Object.values(routes).flatMap(route=>['fr','en'].map(lang=>`  <url><loc>${origin}/${lang}/${route}</loc><xhtml:link rel="alternate" hreflang="fr" href="${origin}/fr/${route}"/><xhtml:link rel="alternate" hreflang="en" href="${origin}/en/${route}"/><xhtml:link rel="alternate" hreflang="x-default" href="${origin}/${route}"/></url>`));
 write('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'+urls.join('\n')+'\n</urlset>\n');
-console.log('Built 12 localized pages, locale entry points, shared runtime catalogs and sitemap.');
+console.log('Built 14 localized pages, locale entry points, shared runtime catalogs and sitemap.');

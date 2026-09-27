@@ -10,14 +10,14 @@
 };let saved=null;try{saved=localStorage.getItem('tennoro-language');}catch{}const explicit=location.pathname.match(/^\/(fr|en)(?:\/|$)/)?.[1];const lang=explicit||preferredLanguage(saved,navigator.language);const target=localizedPath(location.pathname,lang)+location.search+location.hash;if(target!==location.pathname+location.search+location.hash)location.replace(target);})();</script>
 <title>Tennoro — Choose your language</title>
 <link rel="icon" type="image/png" href="/assets/favicon-tennoro-orange.png" />
-<link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/" />
-<link rel="alternate" hreflang="en" href="https://tennoro.com/en/" />
-<link rel="alternate" hreflang="x-default" href="https://tennoro.com/" />
+<link rel="alternate" hreflang="fr" href="https://tennoro.com/fr/contact/" />
+<link rel="alternate" hreflang="en" href="https://tennoro.com/en/contact/" />
+<link rel="alternate" hreflang="x-default" href="https://tennoro.com/contact/" />
 <style>html{background:#080808;color:#fff}</style>
 <noscript>
 <link rel="stylesheet" href="/styles.css" />
 </noscript>
 </head><body><noscript><main class="container" style="padding-top:120px;text-align:center">
 <h1 style="font-size:2rem">Choose your language / <span lang="fr">Choisissez votre langue</span></h1>
-<p><a class="button button-secondary" href="/fr/" data-language="fr" lang="fr">FR — Français</a> <a class="button button-secondary" href="/en/" data-language="en" lang="en">EN — English</a></p>
+<p><a class="button button-secondary" href="/fr/contact/" data-language="fr" lang="fr">FR — Français</a> <a class="button button-secondary" href="/en/contact/" data-language="en" lang="en">EN — English</a></p>
 </main></noscript></body></html>

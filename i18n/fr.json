@@ -416,5 +416,11 @@
   "text415": "La présente Politique de Confidentialité peut être modifiée à tout moment afin de refléter l'évolution du service ou des obligations légales.",
   "text416": "La version la plus récente est toujours celle publiée sur les documents officiels de Tennoro.",
   "text417": "12. Contact",
-  "text418": "Pour toute question relative à la présente Politique de Confidentialité ou au traitement des données, les utilisateurs peuvent contacter Tennoro via les moyens de contact officiels mis à disposition."
+  "text418": "Pour toute question relative à la présente Politique de Confidentialité ou au traitement des données, les utilisateurs peuvent contacter Tennoro via les moyens de contact officiels mis à disposition.",
+  "contactLabel": "Contact",
+  "contactTitle": "Contact — Tennoro",
+  "contactDescription": "Contactez Tennoro par e-mail pour toute question sur le site, les sélections ou votre accès.",
+  "contactIntro": "Une question sur Tennoro ? Écrivez-nous directement par e-mail.",
+  "contactAction": "Envoyer un e-mail",
+  "contactHint": "Ce bouton ouvre votre application de messagerie. Vous pouvez aussi copier l’adresse ci-dessous."
 }
