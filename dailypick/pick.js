@@ -1,5 +1,6 @@
 const { t, locale, monthLabel, reasonText } = window.TENNORO_I18N;
 import { PICK_API_URL } from './pick-config.mjs';
+import { preparePickDisplay } from './pick-display.mjs';
 import { isDemoRequest, loadPick } from './pick-data.mjs';
 
 const $ = id => document.getElementById(id);
@@ -92,8 +93,8 @@ function renderAnalysis(p) {
 function renderHistory(data) {
   $('pick-history').hidden = false;
   const history = data.history
-    .filter(h => ['won', 'lost', 'void'].includes(h.result))
-    .sort((a, b) => b.date.localeCompare(a.date))
+    .filter(h => h.completed || ['won', 'lost', 'void'].includes(h.result))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
     .slice(0, 24);
   $('empty-history').hidden = history.length>0;
   const results = {won:t('won'),lost:t('lost'),void:t('void')};
@@ -102,7 +103,8 @@ function renderHistory(data) {
     const top = el('div',undefined,'pick-match-meta');
     top.append(el('time',dateText(h.date)));
     if (h.result !== null) top.append(el('span',results[h.result],'pick-result '+h.result));
-    top.firstChild.dateTime = h.date;
+    else if (h.completed) top.append(el('span',t('completedPending'),'pick-status'));
+    if (h.date) top.firstChild.dateTime = h.date;
     card.append(top,el('h3',h.playerA+' vs '+h.playerB),el('p',t('selection', {name:h.selection})));
     const details = el('div',undefined,'pick-history-details');
     details.append(metric(t('odds'),n(h.odds)),metric(t('confidence'),n(h.confidence,' / 100')));
@@ -121,7 +123,7 @@ async function refresh() {
   for (const id of ['match-card','comparison','evaluation','pick-reasons','history-cards']) $(id).replaceChildren();
   state(t('pickLoading'),t('fetching'));
   try {
-    const data = await loadPick({hostname:location.hostname,search:location.search,endpoint:PICK_API_URL});
+    const data = preparePickDisplay(await loadPick({hostname:location.hostname,search:location.search,endpoint:PICK_API_URL}));
     if(data.status==='no_pick') state(t('noPick'),t('noPickDetail'));
     else { renderAnalysis(data.pick);$('pick-state').hidden=true; }
     renderHistory(data);

@@ -3,7 +3,8 @@ export const messages = {
   fr: {
     language:'Langue', redirect:'Choisissez votre langue', redirectTitle:'Tennoro — Choix de langue',
     pickLoading:'Chargement du dernier pick publié…', fetching:'Récupération des données Tennoro.',
-    noPick:"Aucun pick gratuit aujourd'hui", noPickDetail:"Tennoro n'a identifié aucune rencontre correspondant actuellement aux critères du modèle.",
+    noPick:"Aucun pick disponible pour demain", noPickDetail:"Aucune nouvelle sélection gratuite n'est disponible pour le moment. Retrouvez les derniers picks ci-dessous.",
+    completedPending:'Terminé · résultat en attente',
     unavailable:'Données temporairement indisponibles', unavailableDetail:'Le dernier pick publié ne peut pas être affiché pour le moment. Réessayez plus tard.',
     timeUnknown:'Horaire à confirmer', parisTime:' · heure de Paris', published:'Publié le {date}', ranking:'Classement : {value}',
     selected:'Sélection Tennoro', selectionSuffix:' · sélection', winner:'Vainqueur du match', odds:'Cote', decimalOdds:'Cote décimale', confidence:'Confiance', modelConfidence:'Confiance Tennoro',
@@ -19,7 +20,8 @@ export const messages = {
   en: {
     language:'Language', redirect:'Choose your language', redirectTitle:'Tennoro — Choose your language',
     pickLoading:'Loading the latest published pick…', fetching:'Fetching Tennoro data.',
-    noPick:'No free pick today', noPickDetail:'Tennoro has not identified any match that currently meets the model’s criteria.',
+    noPick:'No pick available for tomorrow', noPickDetail:'No new free pick is available at the moment. You can find the latest picks below.',
+    completedPending:'Finished · result pending',
     unavailable:'Data temporarily unavailable', unavailableDetail:'The latest published pick cannot be displayed right now. Please try again later.',
     timeUnknown:'Start time to be confirmed', parisTime:' · Paris time', published:'Published {date}', ranking:'Ranking: {value}',
     selected:'Tennoro selection', selectionSuffix:' · selected', winner:'Match winner', odds:'Odds', decimalOdds:'Decimal odds', confidence:'Confidence', modelConfidence:'Tennoro confidence',
